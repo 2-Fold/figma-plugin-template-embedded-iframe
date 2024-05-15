@@ -35,16 +35,24 @@ This repo is using:
 - Run `npm build:watch` to start webpack in watch mode.
 - Open `Figma` -> `Plugins` -> `Development` -> `New Plugin...` and choose `manifest.json` file from this repo.
 
-### Sending messages from App
+### Sending Messages from App
 
-Use the following function to send a message from your Web App to the parent iframe. The message type should be a value that correlates with an action inside your plugin.
+Use the following js function to send a message from your Web App to the parent iframe. The message `type` should be a value that correlates with an action inside your plugin.
 
-```
+```js
 window.parent?.postMessage(
   { type: 'HELLO_FROM_APP', payload: 'hello world' },
   '*'
-)
+);
 ```
+
+### Rendering Your Web App in the Iframe
+
+Open `src/plugin/constants.ts` and update the `PROD_URL` and `DEV_URL` values
+
+### Build and Publish
+
+When you're ready to publish your plugin, run `npm run build`. This will build your application and tell Webpack to use your `PROD_URL` inside the iframe. Publish your plugin through the Figma store. Don't forget to update your `manifest.json` file with your `PROD_URL`.
 
 #### Testing
 
