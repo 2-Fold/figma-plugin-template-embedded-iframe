@@ -1,0 +1,13 @@
+{
+  "name": "Figma-Plugin-Template-IFrame",
+  "id": "00000000",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma", "figjam"],
+  "networkAccess": {
+    "devAllowedDomains": ["http://localhost:3000"],
+    "allowedDomains": ["*"],
+    "reasoning": "Change allowedDomains to the domain of your server and remove this line."
+  }
+}
