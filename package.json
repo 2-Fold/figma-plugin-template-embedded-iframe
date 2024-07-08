@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "build": "webpack --mode=production",
-    "build:watch": "webpack --mode=development --watch"
+    "dev": "webpack --mode=development --env=development --watch"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -24,7 +24,6 @@
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "postcss-loader": "^8.1.1",
-    "prettier": "^3.2.5",
     "sass-loader": "^14.2.1",
     "style-loader": "^4.0.0",
     "tailwindcss": "^3.4.3",
