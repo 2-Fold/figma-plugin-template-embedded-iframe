@@ -4,8 +4,8 @@
   "description": "This plugin template uses Typescript & Tailwind",
   "license": "ISC",
   "scripts": {
-    "build": "webpack --mode=production",
-    "dev": "webpack --mode=development --env=development --env-file=.env --watch"
+    "build": "webpack --mode=production --env URL=http://localhost:3001 --env=production",
+    "dev": "webpack --mode=development --env URL=http://localhost:3000 --env=development --watch"
   },
   "dependencies": {
     "react": "^18.3.1",
