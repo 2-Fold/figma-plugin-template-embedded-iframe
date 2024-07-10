@@ -21,15 +21,12 @@ const IFrame = () => {
 
   return (
     <>
+      {console.log(process.env.URL)}
       <iframe
         className="app-iframe"
         ref={iframeRef}
         style={{ width: "100%", height: "100%", border: 0, padding: 0 }}
-        src={
-          process.env.NODE_ENV === "production"
-            ? process.env.PROD_URL
-            : process.env.DEV_URL
-        }
+        src={process.env.URL}
       />
     </>
   );
