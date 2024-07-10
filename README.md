@@ -1,4 +1,5 @@
 # Figma Plugin Template - Embedded Iframe.
+Courtesy of [2fold](https://2fold.io)
 
 ## How it works
 
