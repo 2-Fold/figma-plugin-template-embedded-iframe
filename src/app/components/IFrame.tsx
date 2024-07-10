@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { handleIframeMessage } from '../../utils';
-import { DEV_URL, PROD_URL } from '../../constants';
+import * as React from "react";
+import { handleIframeMessage } from "../../utils";
 
 const IFrame = () => {
   const iframeRef = React.createRef<HTMLIFrameElement>();
@@ -14,9 +13,9 @@ const IFrame = () => {
 
   // Listen for messages
   React.useEffect(() => {
-    window.addEventListener('message', handleIncomingMessage, false);
+    window.addEventListener("message", handleIncomingMessage, false);
     return () => {
-      window.removeEventListener('message', handleIncomingMessage, false);
+      window.removeEventListener("message", handleIncomingMessage, false);
     };
   }, [handleIncomingMessage]);
 
@@ -25,8 +24,12 @@ const IFrame = () => {
       <iframe
         className="app-iframe"
         ref={iframeRef}
-        style={{ width: '100%', height: '100%', border: 0, padding: 0 }}
-        src={process.env.NODE_ENV === 'production' ? PROD_URL : DEV_URL}
+        style={{ width: "100%", height: "100%", border: 0, padding: 0 }}
+        src={
+          process.env.NODE_ENV === "production"
+            ? process.env.PROD_URL
+            : process.env.DEV_URL
+        }
       />
     </>
   );

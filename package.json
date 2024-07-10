@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "build": "webpack --mode=production",
-    "dev": "webpack --mode=development --env=development --watch"
+    "dev": "webpack --mode=development --env=development --env-file=.env --watch"
   },
   "dependencies": {
     "react": "^18.3.1",
